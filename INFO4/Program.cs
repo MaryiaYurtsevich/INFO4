@@ -54,16 +54,75 @@
 //    Console.WriteLine("Ty loszok");
 //}
 
+//Console.WriteLine("Wpisz swoją frazę: ");
+
+//string? fraza = Console.ReadLine();
+
+//Console.WriteLine("Ile razy chcesz wyświetlić swoją frazę?");
+//int ilosc = int.Parse(Console.ReadLine());
+
+//for (int i = 1; i <= ilosc; i++)
+//{
+//    Console.WriteLine(fraza);
+
+//}
+
+//Console.WriteLine("Wpisz swoją frazę: ");
+//string fraza = Console.ReadLine() ?? "";
+
+//int licznik = 0;
+
+//foreach (char znak in fraza)
+//{
+//    licznik++;
+//}
+//Console.WriteLine($"Twoja fraza ma {licznik} znaków.");
+
+//Console.WriteLine("Wpisz swoją frazę: ");
+//string fraza = Console.ReadLine() ?? "";
+
+//int licznik = 0;
+
+//foreach (var znak in fraza)
+//{
+//    if (znak == 'a')
+//    {
+//        licznik++;
+
+//    }
+//}
+//Console.WriteLine($"Twoja fraza ma {licznik} liter 'a'.");
+
+//Console.WriteLine("Wpisz swoją frazę: ");
+//string fraza = Console.ReadLine() ?? "";
+
+//int licznik = 0;
+
+//foreach (var znak in fraza)
+//{
+//    if (char.IsDigit(znak))
+//    {
+//        licznik++;
+
+//    }
+//}
+//Console.WriteLine($"Twoja fraza ma {licznik} cyfer. ");
+
 Console.WriteLine("Wpisz swoją frazę: ");
-string? fraza = Console.ReadLine();
+string fraza = Console.ReadLine() ?? "";
 
-Console.WriteLine("Ile razy chcesz wyświetlić swoją frazę?");
-int ilosc = int.Parse(Console.ReadLine());
-
-for (int i = 1; i <= ilosc; i++)
+int licznikLiter = 0;
+int licznikCyfer = 0;
+foreach (var znak in fraza)
 {
-    Console.WriteLine(fraza);
+    if (char.IsDigit(znak))
+    {
+        licznikCyfer++;
+    }
+    else if (char.IsLetter(znak))
+    {
+        licznikLiter++;
+    }
+
 }
-
-
-
+Console.WriteLine($"Twoja fraza ma {licznikCyfer} cyfer i {licznikLiter} liter. ");
