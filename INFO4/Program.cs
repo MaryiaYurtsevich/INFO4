@@ -127,11 +127,22 @@
 //}
 //Console.WriteLine($"Twoja fraza ma {licznikCyfer} cyfer i {licznikLiter} liter. ");
 
-int suma = 0;
-int[] liczby = { 5, 10, 15, 20, 25 };
+//int suma = 0;
+//int[] liczby = { 5, 10, 15, 20, 25 };
+
+//foreach (int liczba in liczby)
+//{
+//    suma += liczba;
+//}
+//Console.WriteLine($"Suma liczb: {suma}");
+
+int[] liczby = { 34, 7, 89, 2, 56, 11 };
+
+int najmniejsza = liczby[0];
 
 foreach (int liczba in liczby)
 {
-    suma += liczba;
+    if (liczba < najmniejsza)
+        najmniejsza = liczba;
 }
-Console.WriteLine($"Suma liczb: {suma}");
+Console.WriteLine($"Najmniejsza liczba: {najmniejsza}");
