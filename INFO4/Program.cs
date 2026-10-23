@@ -108,21 +108,30 @@
 //}
 //Console.WriteLine($"Twoja fraza ma {licznik} cyfer. ");
 
-Console.WriteLine("Wpisz swoją frazę: ");
-string fraza = Console.ReadLine() ?? "";
+//Console.WriteLine("Wpisz swoją frazę: ");
+//string fraza = Console.ReadLine() ?? "";
 
-int licznikLiter = 0;
-int licznikCyfer = 0;
-foreach (var znak in fraza)
+//int licznikLiter = 0;
+//int licznikCyfer = 0;
+//foreach (var znak in fraza)
+//{
+//    if (char.IsDigit(znak))
+//    {
+//        licznikCyfer++;
+//    }
+//    else if (char.IsLetter(znak))
+//    {
+//        licznikLiter++;
+//    }
+
+//}
+//Console.WriteLine($"Twoja fraza ma {licznikCyfer} cyfer i {licznikLiter} liter. ");
+
+int suma = 0;
+int[] liczby = { 5, 10, 15, 20, 25 };
+
+foreach (int liczba in liczby)
 {
-    if (char.IsDigit(znak))
-    {
-        licznikCyfer++;
-    }
-    else if (char.IsLetter(znak))
-    {
-        licznikLiter++;
-    }
-
+    suma += liczba;
 }
-Console.WriteLine($"Twoja fraza ma {licznikCyfer} cyfer i {licznikLiter} liter. ");
+Console.WriteLine($"Suma liczb: {suma}");
